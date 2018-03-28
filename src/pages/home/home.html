@@ -14,9 +14,25 @@
         <ion-card-title>
           {{post.title.rendered}}
           </ion-card-title>
+          <!--
         <div [inner-html]="post.excerpt.rendered"></div>
+          -->
+          <div [innerHTML]="post.excerpt.rendered"></div>
       </ion-card-content>
   </ion-card>
 
 
 </ion-content>
+
+<ion-footer class="footer-player">
+  <ion-grid >
+    <ion-row style="text-align: center;">
+      <ion-col >
+        <img *ngIf="!showButton" class="play-button" (click)="playStream()"
+        src="assets/imgs/play-button.png">
+        <img *ngIf="showButton" class="stop-button" (click)="stopStream()"
+        src="assets/imgs/stop.png">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

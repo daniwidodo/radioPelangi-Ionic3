@@ -1,4 +1,10 @@
 page-home {
+    
+    ion-content{
+        background-color: darkgrey;
+    }
+    
+
     img {
         width: 100%;
        
@@ -15,5 +21,26 @@ page-home {
         text-align: center;
         font-weight: bold;
         background-color: black;
+    }
+
+    
+    .footer-player {
+        //background-image: url('../assets/imgs/player-bg.png');
+        background-color: black;
+        
+    }
+
+    .play-button {
+        width: 3em;
+        height: auto;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .stop-button {
+        width: 3em;
+        height: auto;
+        text-align: center;
     }
 }

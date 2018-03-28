@@ -13,7 +13,7 @@ export class RadioApiProvider {
 
   async getPosts(){
     return new Promise( resolve => {
-      this.http.get(this.apiUrl+'/posts/?_embed').subscribe(data =>{
+      this.http.get(this.apiUrl+'/posts/?_embed&categories=4').subscribe(data =>{
         resolve(data);
       })
     })

@@ -10,6 +10,7 @@ import { RadioApiProvider } from '../providers/radio-api/radio-api';
 import { RadioStreamProvider } from '../providers/radio-stream/radio-stream';
 import { HttpClientModule } from '@angular/common/http';
 import { PostDetailPageModule } from '../pages/post-detail/post-detail.module';
+import { MusicControls } from '@ionic-native/music-controls'
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { PostDetailPageModule } from '../pages/post-detail/post-detail.module';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     RadioApiProvider,
     RadioStreamProvider,
-    HttpClientModule
+    HttpClientModule,
+    MusicControls
   ]
 })
 export class AppModule {}

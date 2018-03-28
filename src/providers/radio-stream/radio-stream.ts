@@ -9,7 +9,7 @@ export class RadioStreamProvider {
   promise:any;
 
   constructor(
-    public http: HttpClient,
+    
   ) {
 
     //
@@ -21,20 +21,19 @@ export class RadioStreamProvider {
   playAudioProvider(){
     //
     this.stream.play();
-
     //
     this.promise = new Promise((resolve,reject) => {
-      this.stream.addEventListener('playing', () => {
-        resolve(true);
-      });
-      this.stream.addEventListener('error', () => {
-        reject(false);
-      });
+     this.stream.addEventListener('playing', () => {
+       resolve(true);
+     });
 
-      //
-      return this.promise;
-    });
-  }
+     this.stream.addEventListener('error', () => {
+       reject(false);
+     });
+   });
+   
+  return this.promise;
+};
 
   //
   pauseProvider() {
